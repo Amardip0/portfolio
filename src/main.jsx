@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { inject } from '@vercel/analytics';
 import '@fontsource/anton';
 import '@fontsource/instrument-serif/400.css';
 import '@fontsource/instrument-serif/400-italic.css';
@@ -8,5 +9,7 @@ import '@fontsource/jetbrains-mono/400.css';
 import '@fontsource/jetbrains-mono/500.css';
 import './styles.css';
 import App from './App.jsx';
+
+inject();
 
 createRoot(document.getElementById('root')).render(<React.StrictMode><App /></React.StrictMode>);
